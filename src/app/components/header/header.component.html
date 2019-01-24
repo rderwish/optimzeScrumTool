@@ -1,0 +1,19 @@
+<div class="header">
+  <i class="icon ion-md-menu" (click)="headerService.toggleSideMenu()"></i>
+  <span class="h3">Titel</span>
+  <div class="btn-group btn-group-lg align-items-center">
+    <div class="language-toggle" (click)="toggleLanguage()">
+      <span>DE/EN</span>
+    </div>
+    <div data-toggle="dropdown">
+      <i class="icon ion-md-notifications" #notification></i>
+      <i class="caret dropdown-toggle"></i>
+      <ul class="dropdown-menu">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+    <img class="user_img_header" src="../../../assets/images/user_profile_default.png" alt="user_img" />
+  </div>
+</div>

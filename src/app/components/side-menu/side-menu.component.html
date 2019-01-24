@@ -1,0 +1,14 @@
+<div class="sidemenu-header">
+  <i class="icon ion-md-paper-plane" [ngClass]="{'sidemenu-collapsed': headerService.isMenuCollapsed, 'sidemenu-uncollapsed': headerService.isMenuCollapsed}"></i>
+</div>
+<div class="h-100 flex-column">
+  <div class="container side-menuitem-container">
+    <nav class="mt-4">
+      <div *ngFor="let item of menuItems" [routerLink]="item.path" routerLinkActive="active" class="d-flex align-items-center menu-item">
+        <div><i class="icon {{ item.icon }}"></i></div>
+        <div>{{ item.name }}</div>
+      </div>
+    </nav>
+    <br>
+  </div>
+</div>

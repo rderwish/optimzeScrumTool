@@ -1,0 +1,50 @@
+/**
+ * Copyright (c) 2018 Lufthansa Industry Solutions TS GmbH
+ * All Rights reserved.
+ */
+ .side-menu-container {
+    width: var(--sidemenu-width);
+    height: 100%;
+    overflow: hidden;
+    float: left;
+  
+    background-color: var(light-color);
+  
+    transition: 0.3s width;
+  }
+  
+  .main-container {
+    height: 100%;
+    width: calc(100% - var(--sidemenu-width));
+    float: left;
+  
+    background-color: var(--content-background-color);
+  
+    transition: 0.3s width;
+  
+    .header-container {
+      height: var(--header-height);
+      background-color: var(--highlight-color);
+      border-bottom: solid 1px var(--border-color);
+    }
+    .router-container {
+      height: calc(100% - var(--header-height));
+      overflow: auto;
+      background-color: white;
+      
+    }
+  }
+  
+  .sidemenu-collapsed {
+    .side-menu-container {
+      width: var(--sidemenu-width-collapsed);
+    }
+    .main-container {
+      width: calc(100% - var(--sidemenu-width-collapsed));
+    }
+  
+    .side-menu-header {
+      font-size: 35px;
+    }
+  }
+  

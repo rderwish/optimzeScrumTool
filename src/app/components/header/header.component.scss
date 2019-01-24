@@ -1,0 +1,38 @@
+.header {
+    height: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: rgb(0,31,82);;
+    color: var(--highlight-color);
+  
+    .language-toggle {
+      margin-right: 30px;
+    }
+  
+    .dropdown-menu {
+      padding-left: 5px;
+    }
+  
+    i {
+      font-size: 1.2em;
+    }
+  
+    .user_img_header {
+      max-height: calc(var(--header-height) * 0.6);
+      filter: brightness(0) invert(1);
+    }
+  
+    img {
+      margin: 0 10px 0 25px;
+    }
+  
+    .btn-group {
+      .caret {
+        margin-left: 10px;
+      } 
+    }
+  }
+  

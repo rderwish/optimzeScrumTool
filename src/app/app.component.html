@@ -1,7 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
-
+<div class="w-100 h-100" [class.sidemenu-collapsed]="headerService.isMenuCollapsed">
+  <div class="side-menu-container">
+    <app-side-menu></app-side-menu>
+  </div>
+  <div class="main-container">
+    <div class="header-container">
+      <app-header></app-header>
+    </div>
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
