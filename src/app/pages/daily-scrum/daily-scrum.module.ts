@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DailyScrumComponent } from './daily-scrum.component';
 import { DailyScrumRoutingModule } from './daily-scrum-routing.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /**
  * Module of hero list.
@@ -18,6 +18,8 @@ import { DailyScrumRoutingModule } from './daily-scrum-routing.module';
   imports: [
     CommonModule,
     DailyScrumRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     

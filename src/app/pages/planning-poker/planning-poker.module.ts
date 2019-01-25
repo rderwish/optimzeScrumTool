@@ -5,11 +5,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlanningPokerComponent } from './planning-poker.component';
-import { PlanningPokerModule } from './planning-poker-routing.module';
-
+import { PlanningPokerRoutingModule } from './planning-poker-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /**
- * Module of hero list.
+ *
  * 
  * @author 
  */
@@ -17,10 +17,12 @@ import { PlanningPokerModule } from './planning-poker-routing.module';
   declarations: [PlanningPokerComponent],
   imports: [
     CommonModule,
-    PlanningPokerModule,
+    PlanningPokerRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     
   ]
 })
-export class PlaningPokerModule { }
+export class PlanningPokerModule { }

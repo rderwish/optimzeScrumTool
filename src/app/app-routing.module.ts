@@ -8,13 +8,11 @@ import { DailyScrumComponent } from "./pages/daily-scrum/daily-scrum.component";
 const routes: Routes = [
   {
     path: 'daily-scrum',
-    loadChildren: './pages/daily-scrum/daily-scrum.module#DailyScrumComponent',
-    data: [{ title: 'daily_scrum' }],
+    loadChildren: './pages/daily-scrum/daily-scrum.module#DailyScrumModule'
   },
   {
     path: 'planning-poker',
-    loadChildren: './pages/planning-poker/planning-poker.module#PlanningPokerComponent',
-    data: [{ title: 'planning_poker' }]
+    loadChildren: './pages/planning-poker/planning-poker.module#PlanningPokerModule'
   },
   {
     path: '',
@@ -22,9 +20,13 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
+/**
+ * Module to define routes for the application.
+ * 
+ */
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports:[RouterModule]
 })
 export class AppRoutingModule {}
