@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MatProgressSpinnerModule } from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    
+    MatProgressSpinnerModule,
   ],
+  exports:[MatProgressSpinnerModule],
   providers: [],
   bootstrap: [AppComponent]
 })

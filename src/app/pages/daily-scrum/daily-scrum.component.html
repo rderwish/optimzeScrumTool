@@ -1,4 +1,37 @@
-<p>
-  daily-scrum works!
-</p>
-<div class="d-flex justify-content-center"><i class="fa fa-play-circle fa-4x"></i></div>
+<div *ngIf="!onDailyTimer">
+  <div class="d-flex justify-content-center"><span>Choose team size</span></div>
+  <input
+    #numberOfDailyMember
+    class="form-control"
+    placeholder="Member"
+    type="number"
+  />
+  <div class="d-flex justify-content-center">
+    <button (click)="startDailyTimer(numberOfDailyMember.value)">
+      <i style="font-size: 12em" class="fa fa-play-circle fa-4x"></i>
+    </button>
+  </div>
+</div>
+<div class="container-fluid" *ngIf="onDailyTimer">
+  <button class="btn btn-primary bg-black" (click)="startDailyTimer(1)">
+    Increase
+  </button>
+  <div class="d-flex justify-content-center">
+    Number of daily member: {{ numberOfDailyMember }} 
+  </div>
+  <div class="d-flex justify-content-center">
+    You talked: {{ talkedTimeTalk }} seconds
+  </div>
+  <mat-progress-spinner
+    class="example-margin"
+    [mode]="mode"
+    [value]="talkedTimeTalk"
+  >
+  </mat-progress-spinner>
+  <div class="d-flex justify-content-center">
+    <span>SPINNER COMES HERE</span>
+  </div>
+  <div class="d-flex justify-content-center">
+    <span>What have you completed? AND OTHER QUESTIONS</span>
+  </div>
+</div>

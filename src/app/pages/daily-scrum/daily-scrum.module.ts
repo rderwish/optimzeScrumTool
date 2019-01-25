@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { DailyScrumComponent } from './daily-scrum.component';
 import { DailyScrumRoutingModule } from './daily-scrum-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 /**
  * Module of hero list.
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DailyScrumRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     
