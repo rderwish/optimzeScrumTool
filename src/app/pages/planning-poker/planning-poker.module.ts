@@ -5,7 +5,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlanningPokerComponent } from './planning-poker.component';
-import { PlanningPokerModule } from './daily-scrum-routing.module';
+import { PlanningPokerModule } from './planning-poker-routing.module';
 
 
 /**
