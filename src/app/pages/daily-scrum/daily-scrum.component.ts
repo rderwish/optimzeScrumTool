@@ -9,36 +9,36 @@ import { interval, Observable, timer } from "rxjs";
 })
 export class DailyScrumComponent implements OnInit {
   public numberOfDailyMember: number = 0;
+  public counter: number = 0;
+  public numberOfSelectedMember: number = 1;
+
   public talkedTimeTalk: number = 0;
   public onDailyTimer: boolean = false;
 
   public mode = "determinate";
   constructor() {}
- 
+
   ngOnInit() {}
 
-  startDailyTimer(numberOfDailyMember: number) {
-    this.numberOfDailyMember = numberOfDailyMember;
+  startDailyTimer(dailyMember: number) {
     this.onDailyTimer = true;
-    setInterval(()=>{
-      if(this.talkedTimeTalk < 180){
-          this.talkedTimeTalk++
+    this.numberOfDailyMember = dailyMember;
+
+    setInterval(() => {
+      if (this.talkedTimeTalk < 180) {
+        this.talkedTimeTalk++;
+        this.counter = this.counter + 0.55;
+        console.log("counter", this.counter)
+        console.log("talkedTimetalk", this.talkedTimeTalk)
+        if (this.counter > 98 ) {
+          this.numberOfSelectedMember++;
+          this.talkedTimeTalk=0
+          this.counter = 0;
+        }
       }
-      clearInterval();
-    }
-    ,1000)
-  
-    // while(this.numberOfDailyMember != numberOfDailyMember * 180){
-    //   timer.subscribe(incre => this.numberOfDailyMember + incre )
-    // console.log(timer)
-    // }
-    
-    // setInterval(() => {
-    //   this.numberOfDailyMember++;
-    //   if (this.startDailyTalk == numberOfDailyMember * 180) {
-    //     clearInterval();
-    //   }
-    // }, 1000);
-    console.log(numberOfDailyMember);
+      // clearInterval();
+    }, 1000);
+
+    console.log(dailyMember);
   }
 }
