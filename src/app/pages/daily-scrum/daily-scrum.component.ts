@@ -32,10 +32,10 @@ export class DailyScrumComponent implements OnInit {
     setInterval(() => {
       if (
         this.talkedTimeTalk < 180 &&
-        this.numberOfSelectedMember < dailyMember
+        (this.numberOfSelectedMember+1) <= dailyMember
       ) {
         this.talkedTimeTalk++;
-        this.counter = this.counter + 0.55;
+        this.counter = this.counter + 10;
         console.log("counter", this.counter);
         console.log("talkedTimetalk", this.talkedTimeTalk);
         if (this.counter > 99) {
@@ -44,6 +44,7 @@ export class DailyScrumComponent implements OnInit {
           this.counter = 0;
         }
         if (this.numberOfSelectedMember >= dailyMember) {
+          this.onDailyTimer=!false;
           this.dailyDoneMessage = !this.dailyDoneMessage;
         }
       }
