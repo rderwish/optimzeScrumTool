@@ -35,7 +35,7 @@ export class DailyScrumComponent implements OnInit {
         this.numberOfSelectedMember < dailyMember
       ) {
         this.talkedTimeTalk++;
-        this.counter = this.counter + 10;
+        this.counter = this.counter + 0.55;
         console.log("counter", this.counter);
         console.log("talkedTimetalk", this.talkedTimeTalk);
         if (this.counter > 99) {
