@@ -43,7 +43,7 @@ export class DailyScrumComponent implements OnInit {
    */
   activateTimer(dailyMember) {
     setInterval(() => {
-      if (this.talkedTimeTalk < 180 && this.numberOfSelectedMember + 1 <= dailyMember) {
+      if (this.talkedTimeTalk < 120 && this.numberOfSelectedMember + 1 <= dailyMember) {
         this.talkedTimeTalk++;
         this.counter = this.counter + 10;
         if (this.counter > 99) {
